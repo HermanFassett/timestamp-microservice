@@ -1,0 +1,11 @@
+{
+  "name": "timestamp",
+  "version": "0.0.0",
+  "description": "Timestamp microservice API Basejump",
+  "main": "server.js",
+  "repository": "",
+  "author": "Herman Fassett",
+  "dependencies": {
+    "express": "~4.13.3"
+  }
+}
