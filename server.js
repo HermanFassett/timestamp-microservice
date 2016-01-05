@@ -17,7 +17,7 @@ app.get('/:timestamp', function(req, res) {
   var timestamp = req.params.timestamp;
   var result = { unix: null, natural: null };
   var date = new Date(isNaN(timestamp) ? timestamp : parseInt(timestamp, 10)*1000);
-  if (date.getTime() > 0) {
+  if (!isNaN(date.getTime())) {
     result.unix = Math.floor(date.getTime() / 1000);
     result.natural = months[date.getUTCMonth()] + " " + date.getUTCDate() + ", " + date.getUTCFullYear();
   }
